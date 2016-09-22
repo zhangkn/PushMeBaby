@@ -5,3 +5,5 @@
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
 #endif
+//#define UAT 1 // 测试环境
+#define UAT 0 // 生产环境

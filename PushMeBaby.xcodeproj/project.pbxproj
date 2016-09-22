@@ -14,6 +14,9 @@
 		A690E0150F8BA56300CEA7C7 /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A690E0140F8BA56300CEA7C7 /* ApplicationDelegate.m */; };
 		A690E01D0F8BA57E00CEA7C7 /* ioSock.c in Sources */ = {isa = PBXBuildFile; fileRef = A690E01C0F8BA57E00CEA7C7 /* ioSock.c */; };
 		A690E05D0F8BA8C800CEA7C7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A690E05C0F8BA8C800CEA7C7 /* Security.framework */; };
+		E11749151D93BFD200B89DFE /* aps_pro.cer in Resources */ = {isa = PBXBuildFile; fileRef = E11749141D93BFD200B89DFE /* aps_pro.cer */; };
+		E13504D31D6EEE84009E3736 /* aps_development.cer in Resources */ = {isa = PBXBuildFile; fileRef = E13504D21D6EEE84009E3736 /* aps_development.cer */; };
+		E19650391D2E019D009679AB /* aps.cer in Resources */ = {isa = PBXBuildFile; fileRef = E19650381D2E019D009679AB /* aps.cer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		A690E01B0F8BA57E00CEA7C7 /* ioSock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ioSock.h; path = Classes/ioSock.h; sourceTree = "<group>"; };
 		A690E01C0F8BA57E00CEA7C7 /* ioSock.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ioSock.c; path = Classes/ioSock.c; sourceTree = "<group>"; };
 		A690E05C0F8BA8C800CEA7C7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		E11749141D93BFD200B89DFE /* aps_pro.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = aps_pro.cer; sourceTree = "<group>"; };
+		E13504D21D6EEE84009E3736 /* aps_development.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = aps_development.cer; sourceTree = "<group>"; };
+		E19650381D2E019D009679AB /* aps.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = aps.cer; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E11749141D93BFD200B89DFE /* aps_pro.cer */,
+				E13504D21D6EEE84009E3736 /* aps_development.cer */,
+				E19650381D2E019D009679AB /* aps.cer */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -160,6 +169,7 @@
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* PushMeBaby */;
 			projectDirPath = "";
@@ -176,7 +186,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				E13504D31D6EEE84009E3736 /* aps_development.cer in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				E11749151D93BFD200B89DFE /* aps_pro.cer in Resources */,
+				E19650391D2E019D009679AB /* aps.cer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

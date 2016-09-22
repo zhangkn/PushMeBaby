@@ -23,9 +23,22 @@
 - (id)init {
 	self = [super init];
 	if(self != nil) {
-		self.deviceToken = @"";
-		self.payload = @"{\"aps\":{\"alert\":\"This is some fancy message.\",\"badge\":1}}";
-		self.certificate = [[NSBundle mainBundle] pathForResource:@"apns" ofType:@"cer"];
+        self.payload = @"{\"aps\":{\"alert\":\"This is some fancy message.\",\"badge\":1,\"sound\":\"sound.caf\"},\"content\":{\"type\":\"4\",\"id\":\"201608174476430\",\"appid\":\"01\"}}";
+        //使用后台远程推送的数据格式
+//        self.payload = @"{\"aps\":{\"content-available\":1,\"alert\":\"This is some fancy message.\",\"badge\":1,\"sound\":\"sound.caf\"},\"content-id\":42}";
+        
+        // 要求填写需要推送到得设备的devicetOKEN
+//        self.deviceToken = @"84f9879d8ce71f972e86bad77d9c1ab396323d8015ff68624f0bbe0959c1ee8c";
+//        self.certificate = [[NSBundle mainBundle] pathForResource:@"aps_development" ofType:@"cer"];//PushTest
+//        self.deviceToken = @"84f9879d8ce71f972e86bad77d9c1ab396323d8015ff68624f0bbe0959c1ee8c";
+//        self.deviceToken = @"84f9879d 8ce71f97 2e86bad7 7d9c1ab3 96323d80 15ff6862 4f0bbe09 59c1ee8c";
+//        9da4718905af31c90a457b5111acc69e1febc0e41c01ad99744429b1acd4d7d2
+        self.deviceToken = @"504cd946 03b6f8c2 3a2261c0 fc8284f1 4e3e6f71 e395bbdb ef715804 bd54d305";
+//744cf779 a9290bbd 47fb8908 19277580 dc5d6616 1bf6655a 4bca8ef6 d607bf2d
+        self.deviceToken = @"744cf779 a9290bbd 47fb8908 19277580 dc5d6616 1bf6655a 4bca8ef6 d607bf2d";
+//        self.certificate = [[NSBundle mainBundle] pathForResource:@"aps_development" ofType:@"cer"];//iCloudPay
+        self.certificate = [[NSBundle mainBundle] pathForResource:@"aps_pro" ofType:@"cer"];//iCloudPay aps_pro.cer
+
 	}
 	return self;
 }
@@ -76,7 +89,11 @@
 	
 	// Establish connection to server.
 	PeerSpec peer;
-	result = MakeServerConnection("gateway.sandbox.push.apple.com", 2195, &socket, &peer);// NSLog(@"MakeServerConnection(): %d", result);
+    if (UAT) {
+        result = MakeServerConnection("gateway.sandbox.push.apple.com", 2195, &socket, &peer);// NSLog(@"MakeServerConnection(): %d", result);
+    }else{
+        result = MakeServerConnection("gateway.push.apple.com", 2195, &socket, &peer);
+    }
 	
 	// Create new SSL context.
 	result = SSLNewContext(false, &context);// NSLog(@"SSLNewContext(): %d", result);
@@ -88,7 +105,11 @@
 	result = SSLSetConnection(context, socket);// NSLog(@"SSLSetConnection(): %d", result);
 	
 	// Set server domain name.
-	result = SSLSetPeerDomainName(context, "gateway.sandbox.push.apple.com", 30);// NSLog(@"SSLSetPeerDomainName(): %d", result);
+    if (UAT) {
+        result = SSLSetPeerDomainName(context, "gateway.sandbox.push.apple.com", 30);// NSLog(@"SSLSetPeerDomainName(): %d", result);
+    }else{
+        result = SSLSetPeerDomainName(context, "gateway.push.apple.com", 22);
+    }
 	
 	// Open keychain.
 	result = SecKeychainCopyDefault(&keychain);// NSLog(@"SecKeychainOpen(): %d", result);
