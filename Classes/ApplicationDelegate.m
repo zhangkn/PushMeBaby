@@ -33,9 +33,12 @@
 //        self.deviceToken = @"84f9879d8ce71f972e86bad77d9c1ab396323d8015ff68624f0bbe0959c1ee8c";
 //        self.deviceToken = @"84f9879d 8ce71f97 2e86bad7 7d9c1ab3 96323d80 15ff6862 4f0bbe09 59c1ee8c";
 //        9da4718905af31c90a457b5111acc69e1febc0e41c01ad99744429b1acd4d7d2
-        self.deviceToken = @"504cd946 03b6f8c2 3a2261c0 fc8284f1 4e3e6f71 e395bbdb ef715804 bd54d305";
+//        self.deviceToken = @"504cd946 03b6f8c2 3a2261c0 fc8284f1 4e3e6f71 e395bbdb ef715804 bd54d305";
 //744cf779 a9290bbd 47fb8908 19277580 dc5d6616 1bf6655a 4bca8ef6 d607bf2d
-        self.deviceToken = @"744cf779 a9290bbd 47fb8908 19277580 dc5d6616 1bf6655a 4bca8ef6 d607bf2d";
+//809f1862 738f930c c794b418 962b0a96 dd5db213 5e4eeb88 ac1921fb ecc9d6dc
+//        self.deviceToken = @"744cf779 a9290bbd 47fb8908 19277580 dc5d6616 1bf6655a 4bca8ef6 d607bf2d";
+        self.deviceToken = @"809f1862 738f930c c794b418 962b0a96 dd5db213 5e4eeb88 ac1921fb ecc9d6dc";
+
 //        self.certificate = [[NSBundle mainBundle] pathForResource:@"aps_development" ofType:@"cer"];//iCloudPay
         self.certificate = [[NSBundle mainBundle] pathForResource:@"aps_pro" ofType:@"cer"];//iCloudPay aps_pro.cer
 
