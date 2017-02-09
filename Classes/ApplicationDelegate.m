@@ -40,7 +40,7 @@
         self.deviceToken = @"809f1862 738f930c c794b418 962b0a96 dd5db213 5e4eeb88 ac1921fb ecc9d6dc";
 
 //        self.certificate = [[NSBundle mainBundle] pathForResource:@"aps_development" ofType:@"cer"];//iCloudPay
-        self.certificate = [[NSBundle mainBundle] pathForResource:@"aps_pro" ofType:@"cer"];//iCloudPay aps_pro.cer
+        self.certificate = [[NSBundle mainBundle] pathForResource:@"aps_pro" ofType:@"cer"];//iCloudPay aps_pro.cer 
 
 	}
 	return self;
