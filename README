@@ -1,1 +1,6 @@
 You can use this app during iOS Push Notification development to push notifications on your device from your Mac.
+
+生产证书和测试证书的切换请在PCH文件中进行修改UAT的值
+
+#define UAT 1 // 测试环境
+//#define UAT 0 // 生产环境
