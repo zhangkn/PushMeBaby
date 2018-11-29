@@ -4,3 +4,7 @@ You can use this app during iOS Push Notification development to push notificati
 
 #define UAT 1 // 测试环境
 //#define UAT 0 // 生产环境
+
+
+
+// mac机器必须安装对应环境的消息推送证书，且必须包含私有的key . 即导出 p12文件的时候必须选上private keys
